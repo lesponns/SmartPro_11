@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,15 +12,18 @@ namespace SmartPro_11
         {
             //i++ = i+1
             int repeater;
+            string message;
 
-            Console.WriteLine("Kaç kez tekrarlansın?");
-            Console.Write("==> ");
+            Console.Write("Metin giriniz: ");
+            message = Console.ReadLine();
+            
+            Console.Clear();
+            Console.Write("Repeat: ");
             repeater = int.Parse(Console.ReadLine());
 
-            repeater++;
-            for (int i = 1; i < repeater; i++)
-            {
-                Console.WriteLine(i+". Murat");
+            Console.Clear();
+            for (int i = 1; i <= repeater; i++) { 
+                Console.WriteLine(i+". "+message); 
             }
             Console.ReadKey();
         }
